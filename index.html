@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>1980 coffee</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage fixed full-screen backgrounds." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fixed,fullscreen,backgrounds,full-screen" />
+	<meta name="Resource-type" content="Document" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+	
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+	<link rel="stylesheet" href="css/main.css" >
+	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	
+			
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		
+	}
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	
+	#section0,
+	#section1,
+	#section2,
+	#section3,
+    #slide1,
+    #slide2{
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	/* Defining each sectino background and styles
+	* --------------------------------------- */
+	#section0{
+		background-color: #F7ECD0;
+	}
+	#section1{
+		background-color: #F7ECD0;
+		
+	}
+	#section2{
+		background-color: #F7ECD0;
+		align-items: center;
+		display: flex;
+  		justify-content: center;
+	}
+	#section3{
+		background-color: #F7ECD0;
+		
+		
+	}
+	#section4{
+		background-color: #F7ECD0;
+		align-items: center;
+		display: flex;
+  		justify-content: center;
+	}
+	#section5{
+		background-color: #F7ECD0;
+		
+	}
+	#section6{
+		background-color: #F7ECD0;
+		
+	}
+	
+
+	/*Adding background for the slides
+	* --------------------------------------- */
+	#slide1{
+		background-color: #F7ECD0;
+		padding: 200px 0 0 0;
+		text-align:left;
+	}
+	#slide2{
+		background-color: #F7ECD0;
+		padding: 200px 0 0 0;
+		text-align:left;
+	}
+	#slide3{
+		background-color: #F7ECD0;
+		padding: 200px 0 0 0;
+		text-align: left;
+	}
+	#slide4{
+		background-color: #F7ECD0;
+		padding: 200px 0 0 0;
+		text-align:left;
+	}
+	#slide5{
+		background-color: #F7ECD0;
+		padding: 200px 0 0 0;
+		text-align:left;
+	}
+	#slide6{
+		background-color: #F7ECD0;
+		display: flex;
+  		justify-content: center;
+  		
+	}
+	#slide7{
+		background-color: #F7ECD0;
+		
+		text-align:left;
+		align-items: center;
+		display: flex;
+  		justify-content: center;
+  		
+	}
+	#slide8{
+		background-color: #F7ECD0;
+		display: flex;
+  		justify-content: center;
+	}		
+	#slide9{
+		
+		background: url("images/poster1.jpg");
+		background-size: cover;
+	
+		text-align:left;
+		
+	}
+
+	#slide10{
+		background: url("images/Poster 2.jpg");
+		
+		background-size: cover;
+		text-align:left;
+		
+	}
+	#slide11{
+		background-color: #F7ECD0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+					}
+	#slide12{
+		background-color: #F7ECD0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#slide13{
+		background-color: #F7ECD0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	#header, #footer {
+		position:fixed;
+		height: 50px;
+		display:block;
+		width: 100%;
+		z-index:9;
+		color: #f2f2f2;
+		padding: 20px 0 0 0;
+		
+	}
+		
+			
+			
+		
+	#header{
+		top:0px;
+	}
+	#footer{
+		bottom:0px;
+	}
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+	<div id="header">
+		
+		<div class="logo">
+		<a href="#firstPage" >
+		<img src="images/logo.png">
+		</a>	
+		</div>
+			<div class="menu">
+				
+				<div id="myNav" class="overlay" >
+		 			 <a href="javascript:void(0)" class="closebtn"  onclick="closeNav()" ><img src="images/X-12.png" style="width: 30px; height: 30px;"></a>
+		 			 <div class="overlay-content">
+						<a href="#secondPage">GIỚI THIỆU</a>
+						<a href="#thirdPage">THỰC ĐƠN</a>
+						<a href="#fourthPage">KHÔNG GIAN</a>
+						<a href="#fifthPage">BÀI VIẾT</a>
+			 			<a href="#sixthPage">SỰ KIỆN</a>
+		 			 </div>
+				</div>
+		
+				<span style="font-size:30px;cursor:pointer" onclick="openNav()">
+				
+				<img src="images/Tab.png">
+				</span>
+			</div>
+		<span style="position:fixed; z-index: 900; top:80px; left: 210px; font-family:mysecondfont;letter-spacing: 1px;"><font size="+1" color="#592F17" >02 NGUYỄN HUỆ</font></span>
+		<span style="position:fixed; z-index: 900; top:104px; left: 210px; font-family:myFirstFont;"><font size="-1" color="#725A37">Quận 1 TP.HCM</font></span>
+		<span style="position: fixed; right:140px; top: 82px; z-index: 1000;"><a href="#home"><img src="images/envi.png" style="width:70px"></a></span>
+		<span style="position:fixed; z-index: 900; top:80px; right: 225px; font-family:mysecondfont;"><font size="+1" color="#592F17" style="letter-spacing: 1px;">0378964640</font></span>
+		<span style="position:fixed; z-index: 900; top:100px; right: 225px; font-family:myFirstFont;"><font color="#725A37" size="-1">1980coffe@gmail.com</font></span>
+	</div>
+
+	<div id="footer">
+
+		<span  style="position: fixed; right:95px; bottom: 110px; z-index: 1000;"> <a href="#firstPage"> <img src="images/Kéo lên_Hover.png" style="width:48px; height:48px;"></a></span>
+
+	</div>
+
+<div id="fullpage" >
+	
+	<div class="section" id="section0">	
+		<div class="slide" id="slide1">
+				<div class="shape" style="position:relative; top:190px; left: 150px;"> <font size="+3" color="#F4E7DA" style="padding: 10px">CÀ PHÊ ĐẬM ĐÀ LỊCH SỬ</font></div>
+				<h1 style="position:relative; left:150px; color:#592F17; 
+						  ">GIỚI THIỆU </h1>
+			
+				<video autoplay	muted src="images/gioithieu2_1.mp4" style="float:right;bottom: 200px; right: 80px; position: relative;" ></video>
+	
+				<font color="black"  style="position:relative;top: 90px; left:150px; line-height: 20px; font-family:myFirstFont;"> Cà phê là sản phẩm chủ đạo của 1980, do đó, chúng tôi lựa chọn những hạt <br> chất lượng nhất tại các vùng trồng cà phê tinh tuý trên lãnh thổ Việt Nam.</font>
+				<div class="xemthem"> 
+				<a href="#secondPage">
+				<span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="100%"></span></a>
+				</div>
+		
+		
+		</div>
+		<div class="slide" id="slide2">
+				<div class="shape2" style="position:relative; top:190px; left: 150px;"> <font size="+3" color="#F4E7DA" style="padding: 10px">CÀ PHÊ PHONG CÁCH SÀI GÒN</font></div>
+				<h1 style="position:relative;left:150px; color:#592F17; 
+						  ">THỰC ĐƠN </h1>
+			
+				<video autoplay muted src="images/thucdon.mp4" style="float:right;bottom: 200px; right: 80px; position: relative;"></video>
+	
+				<font  color="black"  style="position:relative;top: 90px; left:150px; line-height: 20px; font-family:myFirstFont;"> Một ly cà phê đen tại 1980 coffee sẽ đem đến cho bạn niếm cảm hứng tuyệt <br> vời cho một ngày làm việc đầy hứng khởi.</font>
+				<div class="xemthem"> 
+				<a href="#thirdPage">
+				<span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="100%"></span></a>
+				</div>
+		</div>
+		<div class="slide" id="slide3">
+					
+				<h1 style="position:relative;left:150px; top:450px; color:#592F17;z-index: 1000; 
+						  ">KHÔNG GIAN </h1>
+		
+				<video autoplay muted src="images/Khonggian.mp4" style="float:right;bottom: 240px; right: 60px; position: relative; width: 60%"></video>
+	
+				
+				<div class="xemthem" style="top:450px"> 
+				<a href="#fourthPage">
+				<span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="100%"></span></a>
+				</div>
+		</div>
+		<div class="slide" id="slide4">
+				<div class="shape3" style="position:relative; top:190px; left: 150px;"> <font size="+3" color="#F4E7DA" style="padding: 10px">CÂU CHUYỆN CÀ PHÊ</font></div>
+				<h1 style="position:relative;left:150px; color:#592F17; 
+						  ">BÀI VIẾT </h1>
+			
+			<video autoplay muted src="images/BAI-VIET-PAGE_2.mp4" style="float:right;bottom: 200px; right: 160px; position: relative;"></video>
+				
+	
+				<font  color="black"  style="position:relative;top: 90px; left:150px; line-height: 20px; font-family:myFirstFont;"> 1980 cafe là quán cà phê mang màu sắc cổ xưa, cho chúng ta không <br>khí đầy hoài niệm của những thập niên 70-80 của Việt Nam . . . </font>
+				<div class="xemthem"> 
+				<a href="#fithPage">
+				<span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="100%"></span></a>
+				</div>
+		</div>
+		<div class="slide" id="slide5">
+				<div class="shape4" style="position:relative; top:190px; left: 150px;"> <font size="+3" color="#F4E7DA" style="padding: 10px">CÀ PHÊ ĐÀM ĐẠO</font></div>
+				<h1 style="position:relative; left:150px; color:#592F17; 
+						  ">SỰ KIỆN</h1>
+				<video autoplay muted  src="images/sukien.mp4" style="float:right;bottom: 200px; right: 80px; position: relative;"></video>
+	
+				<font  color="black"  style="position:relative;top: 90px; left:150px; line-height: 20px; font-family:myFirstFont;"> Cùng 1980 tạo nên những không gian gặp gỡ, giao lưu văn hóa,<br> khởi nghiệp của tầng lớp tri thức và cộng đồng xã hội với các chủ<br> đề: cà phê – sách, âm nhạc, điện ảnh, kiến trúc. </font>
+				<div class="xemthem"> 
+				<a href="#sixthPage">
+				<span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="100%"></span></a>
+				</div>
+		</div>
+	</div> 
+	<div class="section" id="section1">
+		<div class="slide" id="slide6">
+	
+			<div class="tong">
+				
+				<div class="heading">
+					<div class="aaaa"><font size="+4" color="592F17">NHÀ SÁNG LẬP</font>
+					
+					
+					</div>
+				</div>
+				<div class="imagesplace">
+				
+				<div class="a">
+				
+					<div class="aa"></div>
+					<div class="aaa">
+						<font color="592F17" size="+2">NGUYỄN HOÀNG MINH HIẾU</font>
+						<font color="black" style="font-family: myFirstFont;padding-top: 20px;">Anh chàng sinh viên trẻ tuổi, tài năng và đầy nhiệt huyết.</font>
+					</div>
+				</div>
+				<div class="a">
+					<div class="aa2"></div>
+					<div class="aaa">
+						<font color="592F17" size="+2">HUỲNH KHANG</font>
+						<font color="black" style="font-family: myFirstFont;padding-top: 20px;">Anh chàng sinh viên trẻ tuổi, tài năng và đầy nhiệt huyết.</font>
+					</div>
+			
+				</div>
+				<div class="a">
+					<div class="aa3"></div>
+					<div class="aaa">
+						<font color="592F17" size="+2">PHẠM MINH QUÂN</font>
+						<font color="black" style="font-family: myFirstFont;padding-top: 20px;">Anh chàng sinh viên trẻ tuổi, tài năng và đầy nhiệt huyết.</font>
+					</div>
+			
+				</div>
+				</div>
+				
+	
+			
+			</div>
+		</div>
+		<div class="slide" id="slide7">
+				
+			<div class="tong2">
+				
+				<div class="heading" >
+					<div class="aaaa"><font size="+4" color="5a7765">LỊCH SỬ PHÁT TRIỂN</font>
+					
+					
+					</div>
+				</div>
+				
+				
+				
+				<div class="imagesplace2">
+				
+				
+				<div class="history" style="background-color: transparent">
+					<div class="year5"><font  color="#5a7765">1980 coffee ra đời với xuất <br> phát điểm là một quán cà <br>phê lề đường.   </font></div>
+					<div class="year5"> <img src="images/celeb-04.png"  width="150px" height="150px" style="left:10px"></div>
+					<div class="year5"><font color="#5a7765">Đạt giải quán cà phê đẹp nhất <br> Thành phố Hồ Chí Minh (do <br> khán giả bình chọn).  </font></div>
+					<div class="year5"> <img src="images/celeb-01.png" width="150px" height="150px" style="left:10px"></div>
+					</div>
+				<div class="history" >
+					
+					
+					<div class="year"><h1 style="position: relative; color:#e29661 ; bottom:26px; left:10px;">1980</h1></div>
+					<div class="year2"><h1 style="position: relative; color:#e29661 ; top:97px;left:10px;">2000</h1></div>
+					<div class="year3"><h1 style="position: relative; color:#e29661 ; bottom:26px;left:10px;">2002</h1></div>
+					<div class="year4"><h1 style="position: relative; color:#e29661 ; top:97px;left:10px;">2020</h1></div>
+					
+					
+					</div>
+				<div class="history" style="background-color: transparent">
+					
+					<div class="year6"> <img src="images/celeb-03.png" width="150px" height="150px" style="left:10px"> </div>
+					<div class="year6"><font  color="#5a7765">Cửa hàng đầu tiên khai trương <br> tại  số 02 Nguyễn Huệ.  </font></div>
+					<div class="year6"><img src="images/celeb-02.png" width="150px" height="150px" style="left:10px"></div> 
+					<div class="year6"><font color="#5a7765">Kỉ niệm 30 năm 1980 coffee <br> ra đời.  </font></div>
+					
+					
+					
+					</div>
+				
+				
+				</div>
+				
+				
+				
+			
+				</div>
+			</div>
+			<div class="slide" id="slide8">
+				<div class="tong">
+				
+				<div class="heading">
+					<div class="aaaa"><font size="+4" color="592F17">BẢN ĐỒ</font>
+					
+					</div>
+				</div>
+				<div class="imagesplace">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5067313700515!2d106.70387031536568!3d10.772447492324208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f43ff5d2f9d%3A0x4995ca9d8b9b5db2!2zMiBOZ3V5w6rMg24gSHXDqsyjLCBC4bq_biBOZ2jDqSwgUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1597684924133!5m2!1svi!2s" width="100%" height="80%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			
+				</div>
+				
+	
+			
+			</div>
+			</div>
+	
+			
+		</div>
+		
+	<div class="section" id="section2"> 
+		<div class="tong3">
+		
+			<div class="baiviet1"></div>
+			<div class="baiviet2">
+			
+					<div class="tab">
+  						<button class="tablinks" onclick="openCity(event, 'caphe')" id="defaultOpen">Cà phê</button>
+ 						 <button class="tablinks" onclick="openCity(event, 'thucuong')">Thức uống</button>
+ 						 <button class="tablinks" onclick="openCity(event, 'doan')">Đồ ăn</button>
+					</div>
+			
+					<div id="caphe" class="tabcontent">
+
+						<div class="slideshow-container">
+  
+  <div class="mySlides2 fade">
+ 						 <div class="monan">
+						
+							<img class="vien" src="images/caphe1.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> CÀ PHÊ SỮA </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+								
+							<img class="vien" src="images/caphe2.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BẠC SỈU </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+						
+							<img class="vien" src="images/caphe3.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> CÀ PHÊ ĐEN </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+						
+							<img class="vien" src="images/caphe2.png" width="80%"><br>	
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> CÀ PHÊ NÂU </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+							
+							<img class="vien" src="images/caphe3.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> VINA-CANO </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						
+						</div>
+						<div class="monan">
+								
+							<img class="vien" src="images/caphe1.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> SỮA ĐÁ SÀI GÒN </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+  
+					</div>
+ 
+  <div class="mySlides2 fade">
+    <div class="monan">
+						
+							<img class="vien" src="images/caphe1.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> AMERICANO </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+								
+							<img class="vien" src="images/caphe2.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> CAPUCHINO </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+						
+							<img class="vien" src="images/caphe3.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> LATTE </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+						
+							<img class="vien" src="images/caphe1.png" width="80%"><br>	
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> ESPRESSO </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+							
+							<img class="vien" src="images/caphe2.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> CARAMEL MACCHIATO </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						
+						</div>
+						<div class="monan">
+								
+							<img class="vien" src="images/caphe3.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> CÀ PHÊ SỮA TƯƠI </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+  
+  </div>
+ 
+
+</div>
+
+ 
+<div class="chuadot" style="text-align:center"> 
+  <span class="dot" onclick="currentSlide(0)"></span> 
+  <span class="dot" onclick="currentSlide(1)"></span> 
+   
+</div>
+						
+						
+						
+					</div>
+
+					<div id="thucuong" class="tabcontent">
+ 					
+						
+		<div class="slideshow-container">
+  
+  					<div class="mySlides2 fade">
+ 						 <div class="monan">
+						
+							<img class="vien" src="images/thucuong1.png" width="80%"><br>
+						    <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> TRÀ ĐÀO </font><br>
+							<a href="thucdon.html"> <span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						
+						</div>
+						<div class="monan">
+								
+							<img class="vien" src="images/thucuong2.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> CAM VẮT </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+						
+							<img class="vien" src="images/thucuong3.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> TRÀ Ô LONG </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+						
+							<img class="vien" src="images/thucuong2.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> TRÀ ĐÀO </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+							
+							<img class="vien" src="images/thucuong1.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> CAM VẮT </font><br>
+								<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+								
+							<img class="vien" src="images/thucuong3.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> TRÀ Ô LONG </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+					</div>
+ 
+  <div class="mySlides2 fade">
+	  
+    <div class="monan">
+						
+							<img class="vien" src="images/thucuong1.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> TRÀ DÂU </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+								
+							<img class="vien" src="images/thucuong2.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BLUE SODA </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+						
+							<img class="vien" src="images/thucuong3.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> CHANH MUỐI </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+						
+							<img class="vien" src="images/thucuong2.png" width="80%"><br>	
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 ">NƯỚC TÁO </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+							
+							<img class="vien" src="images/thucuong3.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> XÁ XỊ </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						
+						</div>
+						<div class="monan">
+								
+							<img class="vien" src="images/thucuong1.png" width="80%"><br>
+							<font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> COKE </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+  
+  </div>
+ 
+  
+</div>
+
+ 
+<div class="chuadot" style="text-align:center"> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  
+</div>
+		
+						
+						
+						
+						
+						
+					</div>
+
+					<div id="doan" class="tabcontent">
+  					
+						<div class="slideshow-container">
+  
+  					<div class="mySlides2 fade">
+ 						<div class="monan">
+						
+							<img class="vien" src="images/doan1.png" width="80%"><br>
+						    <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BÁNH MÌ TRỨNG </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						
+						</div>
+						<div class="monan">
+								
+							<img class="vien" src="images/doan2.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BÁNH SOCOLA </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+						
+							<img class="vien" src="images/doan3.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BÁNH ỐC </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+						
+							<img class="vien" src="images/doan1.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BÁNH MÌ TRỨNG</font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+							
+							<img class="vien" src="images/doan2.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BÁNH SOCOLA </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						
+						</div>
+						<div class="monan">
+								
+							<img class="vien" src="images/doan3.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BÁNH ỐC </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>	
+					</div>
+ 
+  <div class="mySlides2 fade">
+	  
+    <div class="monan">
+						
+							<img class="vien" src="images/doan3.png" width="80%"><br>
+						    <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BÁNH MÌ TRỨNG </font>
+						<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+								
+							<img class="vien" src="images/doan1.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BÁNH SOCOLA </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+						
+							<img class="vien" src="images/doan2.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BÁNH ỐC </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+						
+							<img class="vien" src="images/doan3.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BÁNH MÌ TRỨNG</font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>
+						<div class="monan">
+							
+							<img class="vien" src="images/doan2.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BÁNH SOCOLA </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						
+						</div>
+						<div class="monan">
+								
+							<img class="vien" src="images/doan1.png" width="80%"><br>
+							 <font style="font-size:17px; font-family: mysecondfont; color:#592F17 "> BÁNH ỐC </font><br>
+							<a href="thucdon.html"><span style="font-size:30px;cursor:pointer" ><img src="images/Xem thêm_Mặc định.png" width="50%" ></span></a>
+						</div>	
+  </div>
+ 
+  
+</div>
+
+ 
+<div class="chuadot" style="text-align:center"> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  
+</div>
+		
+						
+					</div>
+			
+			
+			
+			</div>
+			
+		
+		
+		
+		
+		
+		
+		
+		</div>
+		
+	</div>
+	<div class="section" id="section3">
+			<div class="khonggian1">
+			<h1 style="color: #592F17;" >KHÔNG GIAN</h1><br>	
+			<h5 style="color: black;font-family: myFirstFont;line-height: 30px;padding-right: 40px;" >Không gian mà quán đem lại cho những ai muốn thưởng thức hương vị của cà phê thật sự là một trải nghiệm khó quên. Từ những ly cà phê, cho đến những bộ bàn ghế thô sơ, cùng với không gian quán có nét thô sơ nhưng lại tràn đầy sức sống của những năm tháng xưa cũ, 1980 Coffee sẽ mang đến cho mọi người những cảm xúc khó tả về một kí ức tươi đẹp của một Sài Gòn thuở xưa.</h5>
+			</div>
+			<div class="khonggian2" >
+			
+				<div class="w3-content w3-section" style="max-width:100%">
+  				<img class="mySlides" src="images/khonggian 1.png" style="width:100%" >
+  				<img class="mySlides" src="images/image 2.png" style="width:100%">
+  				<img class="mySlides" src="images/image 3.png" style="width:100%">
+				<img class="mySlides" src="images/image 6.png" style="width:100%">
+				</div>
+		
+			</div>
+			
+	</div>
+	<div class="section" id="section4">
+			<div class="tong"> 
+					<div class="baiviet1"></div>
+					<div class="baiviet2">
+						<div class="baivietcon"><div class="baivietcon2"><a href="baiviet.html">  <img src="images/Bai viet_Icon_5.png" width="90%" ></a>	</div> 	</div>
+						<div class="baivietcon" style="text-align: left;  flex-direction: column; justify-content: flex-start;align-items: flex-start; padding-top: 30px;line-height: 90px;">  <font style="font-family: mysecondfont; font-size: 70px; color:#592F17; " >SÀI GÒN <br> VI VU</font>	
+						
+						<h5  style="color: black;font-family: myFirstFont;line-height: 20px;padding-right: 40px;color:black; ">Cùng 1980 coffee khám phá nhưng địa điểm <br> đầy thú vị.</h5>
+							<a href="baiviet.html"><span style="font-size:30px;cursor:pointer; " ><img src="images/Xem thêm_Mặc định.png" width="100" style=" position: relative; bottom: 25px;"></span></a>
+						
+						
+						</div>
+						
+						<div class="baivietcon" style="text-align: right;  flex-direction: column; justify-content: flex-end;align-items: flex-end; padding-top: 30px;line-height: 90px;">  <font style="font-family: mysecondfont; font-size: 70px; color:#592F17; " >CÂU CHUYỆN <br> CÀ PHÊ </font>	
+						
+						<h5  style="color: black;font-family: myFirstFont;line-height: 20px;color:black; ">1980 cafe là quán cà phê mang màu sắc cổ kính, cho <br>chúng ta không khí sài gòn xưa</h5>
+							<a href="baiviet.html"><span style="font-size:30px;cursor:pointer; " ><img src="images/Xem thêm_Mặc định.png" width="100" style="position: relative;bottom: 25px;"></span></a>
+						
+						
+						</div>
+						<div class="baivietcon"><div class="baivietcon2"> <a href="baiviet.html"> <img src="images/Bai viet_Icon_4.png" width="90%" style="bottom: 50px;position: relative"></a>	</div> 	</div>
+				
+					</div>
+			
+			</div>
+	</div>
+	<div class="section" id="section5">
+		<div class="slide" id="slide9">
+			
+		
+		</div>
+		<div class="slide" id="slide10">l
+			
+				
+		</div>
+	</div>
+	<div class="section" id="section6">
+			<div class="chuaquoutes">
+			
+				<div class="quoutes">
+					
+					<font  style="color: black;font-family: mythirdFont;line-height: 20px;color:black; letter-spacing: 2px;font-size: 20px;">Một ly cà phê ngon là phải vừa ngọt vừa đắng.<br>
+						Một tình yêu lý tưởng là một tình yêu vừa ngọt ngào, vừa đắng cay.</font>
+					
+				
+				
+				</div>	
+				
+			</div>
+			<div class="footer">
+		<a href="#firstPage" ><img src="images/logo.png" style="width: 18%; padding-top:80px; padding-left: 180px;"></a>
+		
+		<div class="information" style="margin-top: 40px">
+			
+			
+			<div class="divinformation" >
+				
+				
+				
+				<span style="color:#FFFFFF; line-height: 30px">
+					
+					
+					<span style="font-family: mysecondfont; font-size: 25px">hotline</span><br>
+					
+					<span style="font-size: 12px">02871 087 088</span><br><br><br>
+					
+					
+					<span style="font-family: mysecondfont; font-size: 25px">email</span><br>
+					
+					
+					
+				    <span style="font-size: 12px">1980coffee@gmail.com</span><br>
+				
+				
+				
+				</span>
+				
+			
+			
+			</div>
+			<div class="divinformation" >
+				<span style="color:#FFFFFF; line-height: 30px">
+					
+					
+					<span style="font-family: mysecondfont; font-size: 25px">Address</span><br>
+					
+					<span style="font-size: 12px; bottom: 20px">62 Tran Quang Khai, Tan Dinh, Quan 1 Ho Chi Minh, Vietnam </span><br><br><br>
+					
+					<span style="font-family: mysecondfont; font-size: 25px">About</span><br>
+					
+					
+					
+				    <span style="font-size: 12px">1980 retro coffee shop</span><br>
+				
+				
+				
+				</span>
+			
+			
+			
+			</div>
+		
+		
+		
+		
+		</div>
+		
+		
+
+		</div>
+	
+	</div>
+	</div>
+
+<script type="text/javascript" src="js/fullpage.js"></script>
+<script type="text/javascript" src="js/examples.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        verticalCentered: false,
+
+        //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
+        css3:false,
+		
+		anchors:['firstPage', 'secondPage','thirdPage','fourthPage', 'fifthPage', 'sixthPage'],
+    });
+</script>
+		
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "20%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+	<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+</script>
+	<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = " none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = " block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+	<script>
+  //khai báo biến slideIndex đại diện cho slide hiện tại
+  var slideIndex;
+  // KHai bào hàm hiển thị slide
+  function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides2");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+ 
+      slides[slideIndex].style.display = "block";  
+      dots[slideIndex].className += " active";
+      //chuyển đến slide tiếp theo
+      slideIndex++;
+      //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+      if (slideIndex > slides.length - 1) {
+        slideIndex = 0
+      }    
+      //tự động chuyển đổi slide sau 5s
+     
+  
+  }
+  //mặc định hiển thị slide đầu tiên 
+		  showSlides(slideIndex = 0);
+		
+ 
+ 
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+</script>
+	
+	 
+</body>
+</html>
